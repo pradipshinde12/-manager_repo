@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: red">CSR VOTING APPLICATION</h1>
+        <form th:action="@{/vote}" method="POST">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label>Select Candidate:</label><br>
+            <!-- Loop over the candidates and create radio buttons -->
+            <div th:each="candidate : ${candidates}">
+                <input type="radio" id="candidateName" name="candidateName" th:value="${candidate.name}" required>
+                <label th:for="candidateName" th:text="${candidate.name}"></label><br>
+            </div>
+
+            <button type="submit">Submit Vote</button>
+        </form>
+    </div>
+</body>
+</html>

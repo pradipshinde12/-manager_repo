@@ -1,0 +1,84 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container for the content */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Preformatted text display for results */
+pre {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Allow wrapping of long lines */
+    word-wrap: break-word; /* Break long words if necessary */
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Styling for the Back to Voting button */
+a {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    pre {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+}
